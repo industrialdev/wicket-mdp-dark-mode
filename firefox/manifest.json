@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "MDP Dark Mode",
+  "version": "1.0.0",
+  "description": "Dark mode for the Wicket MDP admin panel",
+  "author": "EstebanForge",
+  "permissions": [
+    "storage",
+    "https://admin.staging.wicketcloud.com/*",
+    "https://admin.wicketcloud.com/*",
+    "https://*.wicketcloud.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://admin.staging.wicketcloud.com/*",
+        "https://admin.wicketcloud.com/*",
+        "https://*.wicketcloud.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["dark.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mdp-dark-mode@wicket.io",
+      "strict_min_version": "109.0"
+    }
+  }
+}
