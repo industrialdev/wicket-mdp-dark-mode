@@ -2,6 +2,8 @@
 
 Dark theme for the Wicket MDP admin panel. Three installation approaches — pick whichever fits your browser setup (Chrome, Brave, Edge, Firefox, or any browser with Tampermonkey).
 
+> **Easiest option:** Use Tampermonkey (Approach C below). Just install the extension, add the userscript, and you're done — no need to enable developer mode or touch browser settings.
+
 ## Features
 
 - Full dark theme covering all MDP surfaces: navbar, sidebar, cards, tables, forms, modals, datepickers, alerts, etc.
