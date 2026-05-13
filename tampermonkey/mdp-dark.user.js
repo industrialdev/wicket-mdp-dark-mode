@@ -91,82 +91,201 @@
    ═══════════════════════════════════════════════════════════ */
 
 html.mdp-dark {
+  /* ── Core palette (descriptive names) ── */
+  --deep-charcoal-black: #0A0D14;
+  --refined-slate-blue-gray: #182230;
+  --bright-chalk-white: #D9DCE0;
+  --light-slate-gray: #9CA3AF;
+  --deep-enterprise-blue: #1565C0;
+  --vibrant-teal-cyan: #1FC5BE;
+  --muted-coral-salmon: #C76161;
+  --soft-mint-green: #A8DDC5;
+  --muted-lavender-purple: #8980B3;
+  --muted-peach-orange: #E59B8E;
 
-  /* ── Surface palette ── */
-  --mdp-bg-0: #181c22;
-  --mdp-bg-1: #1e2329;
-  --mdp-bg-2: #252b33;
-  --mdp-bg-3: #2d343e;
-  --mdp-bg-4: #363e49;
-  --mdp-border: #3a4350;
-  --mdp-border-light: #2e363f;
-  --mdp-text: #d4dae3;
-  --mdp-text-secondary: #8a95a5;
-  --mdp-text-muted: #b2b2b2;
+  /* ── Layout & Typography Scale ── */
+  --mdp-bg-0: var(--deep-charcoal-black);
+  --mdp-bg-1: #111722;
+  --mdp-bg-2: var(--refined-slate-blue-gray);
+  --mdp-bg-3: #1F2D3F;
+  --mdp-bg-4: #27384E;
+  --mdp-border: #374E6A;
+  --mdp-border-light: #2E425B;
+  --mdp-text: var(--bright-chalk-white);
+  --mdp-text-secondary: var(--light-slate-gray);
+  --mdp-text-muted: #6B7280;
   --mdp-accent: #0da090;
   --mdp-accent-dim: rgba(77, 166, 212, 0.15);
-
-  /* ── Custom palette ── */
-  --mdp-bg-deep: #222831;
-  --mdp-surface: #31363F;
-  --mdp-teal: #76ABAE;
-  --mdp-teal-dim: #53787A;
-  --mdp-text-light: #EEEEEE;
-  --mdp-brand-yellow: #ffdd30;
-  --mdp-shadow: rgba(0, 0, 0, 0.3);
-
-  /* ── Absolute colors ── */
   --mdp-white: #ffffff;
   --mdp-black: #000000;
 
-  /* ── Shadows ── */
-  --mdp-shadow-sm: rgba(0, 0, 0, 0.2);
-  --mdp-shadow-heavy: rgba(0, 0, 0, 0.5);
+  /* Standard elevation for cards, dropdowns, and floating elements */
+  --mdp-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 
-  /* ── Selection ── */
-  --mdp-selection-bg: rgba(77, 166, 212, 0.3);
+  /* High elevation for modals. Includes a subtle border ring to guarantee separation from the dark background */
+  --mdp-shadow-heavy: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px var(--mdp-border-light);
 
-  /* ── Chart ── */
-  --mdp-chart-cursor: rgba(255, 255, 255, 0.06);
+  /* Text selection highlight (Based on --deep-enterprise-blue at 40% opacity) */
+  --mdp-selection-bg: rgba(21, 101, 192, 0.4);
 
-  /* ── Buttons ── */
-  --mdp-btn-primary-bg: #c4a600;
-  --mdp-btn-primary-border: #aa9100;
-  --mdp-btn-primary-text: #1a1a1a;
-  --mdp-btn-primary-hover: #d4b600;
-  --mdp-btn-danger-bg: #bb3333;
-  --mdp-btn-danger-border: #992222;
-  --mdp-btn-danger-hover: #cc4444;
-  --mdp-btn-success-bg: #3a8a3a;
-  --mdp-btn-success-border: #2d7a2d;
-  --mdp-btn-success-hover: #4a9a4a;
-  --mdp-btn-warning-bg: #b87020;
-  --mdp-btn-warning-border: #a06018;
-  --mdp-btn-info-bg: #2a8ab8;
-  --mdp-btn-info-border: #2278a0;
+  /* ── Buttons (Adjusted for white text contrast) ── */
+  --mdp-btn-danger-bg: #C62828;
+  --mdp-btn-danger-border: #B71C1C;
+  --mdp-btn-danger-hover: #D32F2F;
 
-  /* ── Alerts ── */
-  --mdp-alert-info-border: #1a4a4a;
-  --mdp-alert-info-bg: #162a2a;
-  --mdp-alert-info-icon-bg: #1a4a4a;
-  --mdp-alert-info-color: #4dd4b8;
-  --mdp-alert-warning-border: #6a5020;
-  --mdp-alert-warning-bg: #2a2010;
-  --mdp-alert-warning-icon-bg: #806020;
-  --mdp-alert-warning-color: #e0c080;
-  --mdp-alert-danger-border: #6a2020;
-  --mdp-alert-danger-bg: #2a1515;
-  --mdp-alert-danger-icon-bg: #a03030;
-  --mdp-alert-success-border: #1a5a30;
-  --mdp-alert-success-bg: #152a1a;
-  --mdp-alert-success-icon-bg: #2a7a3a;
+  --mdp-btn-success-bg: #2E7D32;
+  --mdp-btn-success-border: #1B5E20;
+  --mdp-btn-success-hover: #388E3C;
+
+  --mdp-btn-warning-bg: #D84315; /* Burnt orange to support white text */
+  --mdp-btn-warning-border: #BF360C;
+  --mdp-btn-warning-hover: #E64A19;
+
+  --mdp-btn-info-bg: #02639A;
+  --mdp-btn-info-border: #01436A;
+  --mdp-btn-info-hover: #0277BD;
+
+  /* ── Alerts (Deep washes for panel harmony, bright text) ── */
+  --mdp-alert-info-bg: #0B1B2B;
+  --mdp-alert-info-border: #123E5C;
+  --mdp-alert-info-icon-bg: #02639A;
+  --mdp-alert-info-color: #29B6F6;
+
+  --mdp-alert-warning-bg: #291C0A;
+  --mdp-alert-warning-border: #5C3E14;
+  --mdp-alert-warning-icon-bg: #D84315;
+  --mdp-alert-warning-color: #FFCA28;
+
+  --mdp-alert-danger-bg: #2C1313;
+  --mdp-alert-danger-border: #5C1D1D;
+  --mdp-alert-danger-icon-bg: #C62828;
+  --mdp-alert-danger-color: #EF5350;
+
+  --mdp-alert-success-bg: #132617;
+  --mdp-alert-success-border: #1B4A23;
+  --mdp-alert-success-icon-bg: #2E7D32;
+  --mdp-alert-success-color: #66BB6A;
 
   /* ── Destructive actions ── */
-  --mdp-destructive-color: #ee5555;
-  --mdp-destructive-hover-bg: #3a1515;
-  --mdp-destructive-hover-border: #5a2020;
-  --mdp-destructive-hover-color: #ff7777;
-  --mdp-danger-accent: #ff4444;
+  --mdp-destructive-color: #E57373; /* Lightened to pop on dark panels */
+  --mdp-destructive-hover-bg: #3B1A1A;
+  --mdp-destructive-hover-border: #5C1D1D;
+  --mdp-destructive-hover-color: #FF8A80;
+  --mdp-danger-accent: #EF5350;
+
+  /* =========================================
+   BOOTSTRAP 5 DARK MODE OVERRIDES
+   Maps BS5 classes to the --mdp-* palette
+   ========================================= */
+
+  /* ── Global Body ── */
+  body {
+    background-color: var(--mdp-bg-0);
+    color: var(--mdp-text);
+  }
+
+  /* ── 1. Buttons (.btn-*) ── */
+  .btn-primary {
+    --bs-btn-color: var(--mdp-text);
+    --bs-btn-bg: var(--mdp-btn-primary-bg);
+    --bs-btn-border-color: var(--mdp-btn-primary-border);
+    --bs-btn-hover-color: var(--mdp-white);
+    --bs-btn-hover-bg: var(--mdp-btn-primary-hover);
+    --bs-btn-hover-border-color: var(--mdp-btn-primary-bg);
+  }
+
+  .btn-secondary {
+    --bs-btn-color: var(--mdp-text);
+    --bs-btn-bg: var(--mdp-bg-3);
+    --bs-btn-border-color: var(--mdp-border);
+    --bs-btn-hover-color: var(--mdp-white);
+    --bs-btn-hover-bg: var(--mdp-bg-4);
+    --bs-btn-hover-border-color: var(--mdp-border-light);
+  }
+
+  .btn-success {
+    --bs-btn-color: var(--mdp-text);
+    --bs-btn-bg: var(--mdp-btn-success-bg);
+    --bs-btn-border-color: var(--mdp-btn-success-border);
+    --bs-btn-hover-color: var(--mdp-white);
+    --bs-btn-hover-bg: var(--mdp-btn-success-hover);
+    --bs-btn-hover-border-color: var(--mdp-btn-success-bg);
+  }
+
+  .btn-info {
+    --bs-btn-color: var(--mdp-text);
+    --bs-btn-bg: var(--mdp-btn-info-bg);
+    --bs-btn-border-color: var(--mdp-btn-info-border);
+    --bs-btn-hover-color: var(--mdp-white);
+    --bs-btn-hover-bg: var(--mdp-btn-info-hover);
+    --bs-btn-hover-border-color: var(--mdp-btn-info-bg);
+  }
+
+  .btn-warning {
+    --bs-btn-color: var(--mdp-text);
+    --bs-btn-bg: var(--mdp-btn-warning-bg);
+    --bs-btn-border-color: var(--mdp-btn-warning-border);
+    --bs-btn-hover-color: var(--mdp-white);
+    --bs-btn-hover-bg: var(--mdp-btn-warning-hover);
+    --bs-btn-hover-border-color: var(--mdp-btn-warning-bg);
+  }
+
+  .btn-danger {
+    --bs-btn-color: var(--mdp-text);
+    --bs-btn-bg: var(--mdp-btn-danger-bg);
+    --bs-btn-border-color: var(--mdp-btn-danger-border);
+    --bs-btn-hover-color: var(--mdp-white);
+    --bs-btn-hover-bg: var(--mdp-btn-danger-hover);
+    --bs-btn-hover-border-color: var(--mdp-btn-danger-bg);
+  }
+
+  .btn-dark {
+    --bs-btn-color: var(--mdp-text);
+    --bs-btn-bg: var(--mdp-bg-1);
+    --bs-btn-border-color: var(--mdp-bg-0);
+    --bs-btn-hover-color: var(--mdp-white);
+    --bs-btn-hover-bg: var(--mdp-bg-0);
+    --bs-btn-hover-border-color: var(--mdp-black);
+  }
+
+  .btn-light {
+    --bs-btn-color: var(--mdp-bg-0);
+    --bs-btn-bg: var(--mdp-text);
+    --bs-btn-border-color: var(--mdp-white);
+    --bs-btn-hover-color: var(--mdp-black);
+    --bs-btn-hover-bg: var(--mdp-white);
+    --bs-btn-hover-border-color: var(--mdp-white);
+  }
+
+  .btn-link {
+    --bs-btn-color: var(--vibrant-teal-cyan);
+    --bs-btn-hover-color: var(--mdp-white);
+  }
+
+  /* ── 2. Text Colors (.text-*) ── */
+  /* Using alert text variables to ensure WCAG AA contrast against dark panels */
+  .text-primary { color: var(--mdp-alert-info-color) !important; }
+  .text-secondary { color: var(--mdp-text-secondary) !important; }
+  .text-success { color: var(--mdp-alert-success-color) !important; }
+  .text-info { color: var(--vibrant-teal-cyan) !important; }
+  .text-warning { color: var(--mdp-alert-warning-color) !important; }
+  .text-danger { color: var(--mdp-alert-danger-color) !important; }
+  .text-light { color: var(--mdp-text) !important; }
+  .text-dark { color: var(--mdp-bg-0) !important; }
+  .text-white { color: var(--mdp-white) !important; }
+  .text-body { color: var(--mdp-text) !important; }
+  .text-muted { color: var(--mdp-text-muted) !important; }
+
+  /* ── 3. Background Colors (.bg-*) ── */
+  /* Using core button backgrounds for solid fills */
+  .bg-primary { background-color: var(--mdp-btn-primary-bg) !important; }
+  .bg-secondary { background-color: var(--mdp-bg-3) !important; }
+  .bg-success { background-color: var(--mdp-btn-success-bg) !important; }
+  .bg-info { background-color: var(--mdp-btn-info-bg) !important; }
+  .bg-warning { background-color: var(--mdp-btn-warning-bg) !important; }
+  .bg-danger { background-color: var(--mdp-btn-danger-bg) !important; }
+  .bg-light { background-color: var(--mdp-text) !important; color: var(--mdp-bg-0) !important; }
+  .bg-dark { background-color: var(--mdp-bg-0) !important; }
 
   color-scheme: dark;
 }
