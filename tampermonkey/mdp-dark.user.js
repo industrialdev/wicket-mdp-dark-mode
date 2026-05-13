@@ -1,7 +1,9 @@
 // ==UserScript==
 // @name         MDP Dark Mode
 // @namespace    https://wicketcloud.com/
-// @version      1.0.0
+// @version      1.1.0
+// @updateURL    https://raw.githubusercontent.com/industrialdev/wicket-mdp-dark-mode/main/tampermonkey/mdp-dark.user.js
+// @downloadURL  https://raw.githubusercontent.com/industrialdev/wicket-mdp-dark-mode/main/tampermonkey/mdp-dark.user.js
 // @description  Dark mode for the Wicket MDP admin panel
 // @author       EstebanForge
 // @match        https://admin.staging.wicketcloud.com/*
@@ -103,6 +105,13 @@ html.mdp-dark {
   --mdp-text-muted: #b2b2b2;
   --mdp-accent: #0da090;
   --mdp-accent-dim: rgba(77, 166, 212, 0.15);
+
+  /* ── Custom palette ── */
+  --mdp-bg-deep: #222831;
+  --mdp-surface: #31363F;
+  --mdp-teal: #76ABAE;
+  --mdp-teal-dim: #53787A;
+  --mdp-text-light: #EEEEEE;
   --mdp-brand-yellow: #ffdd30;
   --mdp-shadow: rgba(0, 0, 0, 0.3);
 
@@ -558,9 +567,8 @@ html.mdp-dark .btn-default:focus {
 }
 
 html.mdp-dark .btn-primary {
-  background-color: var(--mdp-btn-primary-bg) !important;
-  border-color: var(--mdp-btn-primary-border) !important;
-  color: var(--mdp-btn-primary-text) !important;
+  background-color: var(--mdp-teal) !important;
+  border-color: var(--mdp-teal-dim) !important;
 }
 
 html.mdp-dark .btn-primary:link,
@@ -1338,6 +1346,16 @@ html.mdp-dark .Tags__list--pills .Tags__list-item {
 /* ── Comments ──────────────────────────────────────────── */
 html.mdp-dark .Comment-list__comment--enter-active {
   background-color: var(--mdp-bg-1) !important;
+}
+
+/* ── Empty state ──────────────────────────────────────── */
+html.mdp-dark .EmptyState__card {
+  background-color: var(--mdp-bg-2) !important;
+  border-color: var(--mdp-border) !important;
+}
+
+html.mdp-dark .instruction-text {
+  color: var(--mdp-white) !important;
 }
 
 /* ── Iframe (help widget) ──────────────────────────────── */

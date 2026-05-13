@@ -1,8 +1,8 @@
 # MDP Dark Mode
 
-Dark theme for the Wicket MDP admin panel. Three installation approaches — pick whichever fits your browser setup (Chrome, Brave, Edge, Firefox, or any browser with Tampermonkey).
+Dark theme for the Wicket MDP admin panel. Three installation approaches — pick whichever fits your browser setup.
 
-> **Easiest option:** Use Tampermonkey (Approach C below). Just install the extension, add the userscript, and you're done — no need to enable developer mode or touch browser settings.
+> **Recommended — Tampermonkey (Approach A).** Just install the extension, add the userscript, and you're done. No developer mode, no browser settings. Also the only approach with **auto-updates** — push a new version to GitHub and Tampermonkey notifies users automatically.
 
 ## Features
 
@@ -16,7 +16,27 @@ Dark theme for the Wicket MDP admin panel. Three installation approaches — pic
 
 ## Approaches
 
-### A. Chrome / Brave / Edge extension — `chrome/`
+### A. Tampermonkey userscript — `tampermonkey/` (recommended)
+
+Works on any browser that supports Tampermonkey. **Auto-updates** — bump the version and push to GitHub; Tampermonkey prompts users automatically.
+
+**1. Install Tampermonkey**
+
+- [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+- [Brave](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) — same Chrome Web Store link; Brave supports Chrome extensions natively
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
+- [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
+- [Safari](https://apps.apple.com/us/app/tampermonkey/id1482490089)
+
+**2. Install the script**
+
+Open Tampermonkey Dashboard → **Utilities** → drag `tampermonkey/mdp-dark.user.js` into the **Import from file** area. Or create a new script and paste the file contents.
+
+**3. Navigate to MDP** — dark mode activates automatically.
+
+---
+
+### B. Chrome / Brave / Edge extension — `chrome/`
 
 Native browser extension. No third-party tools required.
 
@@ -40,7 +60,7 @@ Native browser extension. No third-party tools required.
 
 ---
 
-### B. Firefox extension — `firefox/`
+### C. Firefox extension — `firefox/`
 
 Native WebExtension. Requires Firefox 109+.
 
