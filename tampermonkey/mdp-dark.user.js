@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MDP Dark Mode
 // @namespace    https://wicketcloud.com/
-// @version      1.1.0
+// @version      1.1.1
 // @updateURL    https://raw.githubusercontent.com/industrialdev/wicket-mdp-dark-mode/main/tampermonkey/mdp-dark.user.js
 // @downloadURL  https://raw.githubusercontent.com/industrialdev/wicket-mdp-dark-mode/main/tampermonkey/mdp-dark.user.js
 // @description  Dark mode for the Wicket MDP admin panel
@@ -1128,6 +1128,15 @@ html.mdp-dark {
 
   .table-striped > tbody > tr:nth-of-type(odd) {
     background-color: var(--mdp-bg-3) !important;
+  }
+
+  .table-striped > tbody > tr:nth-of-type(odd) > td.is-sorting {
+    background-color: var(--mdp-bg-3) !important;
+  }
+
+  .table-striped > tbody > tr:nth-of-type(2n) > td.is-sorting,
+  th.is-sorting {
+    background-color: transparent !important;
   }
 
   .TablePaginated {

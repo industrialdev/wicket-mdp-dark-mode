@@ -1040,6 +1040,15 @@ html.mdp-dark {
     background-color: var(--mdp-bg-3) !important;
   }
 
+  .table-striped > tbody > tr:nth-of-type(odd) > td.is-sorting {
+    background-color: var(--mdp-bg-3) !important;
+  }
+
+  .table-striped > tbody > tr:nth-of-type(2n) > td.is-sorting,
+  th.is-sorting {
+    background-color: transparent !important;
+  }
+
   .TablePaginated {
     color: var(--mdp-text) !important;
   }
