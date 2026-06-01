@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MDP Dark Mode
 // @namespace    https://wicketcloud.com/
-// @version      1.1.1
+// @version      1.1.2
 // @updateURL    https://raw.githubusercontent.com/industrialdev/wicket-mdp-dark-mode/main/tampermonkey/mdp-dark.user.js
 // @downloadURL  https://raw.githubusercontent.com/industrialdev/wicket-mdp-dark-mode/main/tampermonkey/mdp-dark.user.js
 // @description  Dark mode for the Wicket MDP admin panel
@@ -629,6 +629,10 @@ html.mdp-dark {
     border-color: var(--mdp-border) !important;
   }
 
+  .FormWizardStep--completed .material-icons {
+    color: var(--vibrant-teal-cyan) !important;
+  }
+
   .has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label, .has-value.Select--single > .Select-control .Select-value .Select-value-label {
     color: var(--mdp-text) !important;
   }
@@ -638,7 +642,7 @@ html.mdp-dark {
   }
 
   .Icon.material-icons {
-    color: var(--bright-chalk-white) !important;
+    color: var(--bright-chalk-white);
   }
 
   .Input > .control-label {
@@ -1126,12 +1130,16 @@ html.mdp-dark {
     background-image: none !important;
   }
 
+  .table.table-striped {
+    background-color: transparent !important;
+  }
+
   .table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: var(--mdp-bg-3) !important;
+    background-color: transparent !important;
   }
 
   .table-striped > tbody > tr:nth-of-type(odd) > td.is-sorting {
-    background-color: var(--mdp-bg-3) !important;
+    background-color: transparent !important;
   }
 
   .table-striped > tbody > tr:nth-of-type(2n) > td.is-sorting,
@@ -1385,6 +1393,10 @@ html.mdp-dark {
     background-color: var(--mdp-bg-3) !important;
     color: var(--mdp-text-secondary) !important;
     border-bottom-color: var(--mdp-border) !important;
+  }
+
+  .table-cell-callout {
+    background-color: transparent !important;
   }
 
 }
