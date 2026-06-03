@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MDP Dark Mode
 // @namespace    https://wicketcloud.com/
-// @version      1.1.2
+// @version      1.1.3
 // @updateURL    https://raw.githubusercontent.com/industrialdev/wicket-mdp-dark-mode/main/tampermonkey/mdp-dark.user.js
 // @downloadURL  https://raw.githubusercontent.com/industrialdev/wicket-mdp-dark-mode/main/tampermonkey/mdp-dark.user.js
 // @description  Dark mode for the Wicket MDP admin panel
@@ -445,6 +445,13 @@ html.mdp-dark {
     color: var(--mdp-accent) !important;
     border-bottom-color: var(--mdp-accent) !important;
     background-color: var(--mdp-accent-dim) !important;
+  }
+
+  .flex-tabs__item.active {
+    color: var(--mdp-accent) !important;
+    border-color: var(--mdp-border) !important;
+    border-bottom-color: transparent !important;
+    background-color: var(--mdp-bg-2) !important;
   }
 
   .card-header {

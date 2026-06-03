@@ -357,6 +357,13 @@ html.mdp-dark {
     background-color: var(--mdp-accent-dim) !important;
   }
 
+  .flex-tabs__item.active {
+    color: var(--mdp-accent) !important;
+    border-color: var(--mdp-border) !important;
+    border-bottom-color: transparent !important;
+    background-color: var(--mdp-bg-2) !important;
+  }
+
   .card-header {
     color: var(--mdp-text) !important;
   }
