@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MDP Dark Mode
 // @namespace    https://wicketcloud.com/
-// @version      1.1.3
+// @version      1.1.4
 // @updateURL    https://raw.githubusercontent.com/industrialdev/wicket-mdp-dark-mode/main/tampermonkey/mdp-dark.user.js
 // @downloadURL  https://raw.githubusercontent.com/industrialdev/wicket-mdp-dark-mode/main/tampermonkey/mdp-dark.user.js
 // @description  Dark mode for the Wicket MDP admin panel
@@ -627,6 +627,10 @@ html.mdp-dark {
     opacity: 0.6;
   }
 
+  .input-radio-striped .radio:nth-of-type(2n) {
+    background-color: var(--mdp-bg-3) !important;
+  }
+
   .FormWizardStep--active .FormWizardStep__title {
     background-color: var(--mdp-bg-4) !important;
   }
@@ -1151,6 +1155,22 @@ html.mdp-dark {
 
   .table-striped > tbody > tr:nth-of-type(2n) > td.is-sorting,
   th.is-sorting {
+    background-color: transparent !important;
+  }
+
+  .table-hover>tbody>tr:hover,
+  .table>thead>tr>td.active,
+  .table>thead>tr>th.active,
+  .table>thead>tr.active>td,
+  .table>thead>tr.active>th,
+  .table>tbody>tr>td.active,
+  .table>tbody>tr>th.active,
+  .table>tbody>tr.active>td,
+  .table>tbody>tr.active>th,
+  .table>tfoot>tr>td.active,
+  .table>tfoot>tr>th.active,
+  .table>tfoot>tr.active>td,
+  .table>tfoot>tr.active>th {
     background-color: transparent !important;
   }
 
