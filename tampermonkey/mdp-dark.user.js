@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MDP Dark Mode
 // @namespace    https://wicketcloud.com/
-// @version      1.1.4
+// @version      1.2.0
 // @updateURL    https://raw.githubusercontent.com/industrialdev/wicket-mdp-dark-mode/main/tampermonkey/mdp-dark.user.js
 // @downloadURL  https://raw.githubusercontent.com/industrialdev/wicket-mdp-dark-mode/main/tampermonkey/mdp-dark.user.js
 // @description  Dark mode for the Wicket MDP admin panel
@@ -174,6 +174,7 @@ html.mdp-dark {
 
   /* ── Destructive actions ── */
   --mdp-destructive-color: #E57373; /* Lightened to pop on dark panels */
+  --mdp-destructive-border: #5C1D1D;
   --mdp-destructive-hover-bg: #3B1A1A;
   --mdp-destructive-hover-border: #5C1D1D;
   --mdp-destructive-hover-color: #FF8A80;
@@ -305,6 +306,107 @@ html.mdp-dark {
   .AccountSelector__toggle:hover, .AccountSelector__toggle:focus {
     background-color: var(--mdp-bg-3) !important;
     color: var(--mdp-text) !important;
+  }
+
+  /* ── AiSummaryBanner ── */
+  .AiSummaryBanner {
+    background-color: var(--mdp-bg-2) !important;
+    border-color: var(--mdp-border) !important;
+    border-left-color: var(--mdp-accent) !important;
+  }
+
+  .AiSummaryBanner__heading .Icon {
+    color: var(--mdp-accent) !important;
+  }
+
+  .AiSummaryBadge {
+    background-color: var(--mdp-bg-4) !important;
+    color: var(--mdp-text-secondary) !important;
+  }
+
+  .AiSummaryBanner__action {
+    background-color: transparent !important;
+    border-color: var(--mdp-border) !important;
+  }
+
+  .AiSummaryBanner__action:hover, .AiSummaryBanner__action:focus {
+    background-color: var(--mdp-bg-3) !important;
+  }
+
+  .AiSummaryBanner__text {
+    color: var(--mdp-text) !important;
+  }
+
+  .AiSummaryBanner__callout {
+    background-color: var(--mdp-alert-info-bg) !important;
+    border-color: var(--mdp-alert-info-border) !important;
+  }
+
+  .AiSummaryBanner__callout .Icon {
+    color: var(--mdp-alert-info-color) !important;
+  }
+
+  .AiSummaryBanner__calloutText {
+    color: var(--mdp-text-secondary) !important;
+  }
+
+  .AiSummaryBanner__footer {
+    border-top-color: var(--mdp-border-light) !important;
+  }
+
+  .AiSummaryBanner__generatedAt {
+    color: var(--mdp-text-secondary) !important;
+  }
+
+  .AiSummaryFeedback {
+    color: var(--mdp-text-secondary) !important;
+  }
+
+  .AiSummaryBanner__disclaimer {
+    color: var(--mdp-text-muted) !important;
+  }
+
+  .AiSummarySignals__item {
+    background-color: var(--mdp-bg-3) !important;
+    border-color: var(--mdp-border) !important;
+  }
+
+  .AiSummarySignals__label {
+    color: var(--mdp-text-secondary) !important;
+  }
+
+  .AiSummarySignals__value {
+    color: var(--mdp-text) !important;
+  }
+
+  .AiSummarySignals__item--danger {
+    background-color: var(--mdp-alert-danger-bg) !important;
+    border-color: var(--mdp-alert-danger-border) !important;
+  }
+
+  .AiSummarySignals__item--danger .AiSummarySignals__label,
+  .AiSummarySignals__item--danger .AiSummarySignals__value {
+    color: var(--mdp-alert-danger-color) !important;
+  }
+
+  .AiSummarySignals__item--success {
+    background-color: var(--mdp-alert-success-bg) !important;
+    border-color: var(--mdp-alert-success-border) !important;
+  }
+
+  .AiSummarySignals__item--success .AiSummarySignals__label,
+  .AiSummarySignals__item--success .AiSummarySignals__value {
+    color: var(--mdp-alert-success-color) !important;
+  }
+
+  .AiSummarySignals__item--warning {
+    background-color: var(--mdp-alert-warning-bg) !important;
+    border-color: var(--mdp-alert-warning-border) !important;
+  }
+
+  .AiSummarySignals__item--warning .AiSummarySignals__label,
+  .AiSummarySignals__item--warning .AiSummarySignals__value {
+    color: var(--mdp-alert-warning-color) !important;
   }
 
   .App__notifications .wkt-alert {

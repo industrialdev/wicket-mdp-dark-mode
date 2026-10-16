@@ -27,6 +27,7 @@ html.mdp-dark {
   --mdp-text: var(--bright-chalk-white);
   --mdp-text-secondary: var(--light-slate-gray);
   --mdp-text-muted: #6B7280;
+  --mdp-text-muted-light: var(--bright-chalk-white);
   --mdp-accent: #0da090;
   --mdp-accent-dim: rgba(77, 166, 212, 0.15);
   --mdp-white: #ffffff;
@@ -61,6 +62,7 @@ html.mdp-dark {
   --mdp-btn-info-bg: #02639A;
   --mdp-btn-info-border: #01436A;
   --mdp-btn-info-hover: #0277BD;
+  --mdp-btn-info-hover-dark: #00456e;
 
   /* ── Alerts (Deep washes for panel harmony, bright text) ── */
   --mdp-alert-info-bg: #0B1B2B;
@@ -85,6 +87,7 @@ html.mdp-dark {
 
   /* ── Destructive actions ── */
   --mdp-destructive-color: #E57373; /* Lightened to pop on dark panels */
+  --mdp-destructive-border: #5C1D1D;
   --mdp-destructive-hover-bg: #3B1A1A;
   --mdp-destructive-hover-border: #5C1D1D;
   --mdp-destructive-hover-color: #FF8A80;
@@ -192,6 +195,7 @@ html.mdp-dark {
   .text-white { color: var(--mdp-white) !important; }
   .text-body { color: var(--mdp-text) !important; }
   .text-muted { color: var(--mdp-text-muted) !important; }
+  .text-muted-light { color: var(--mdp-text-muted-light) !important; }
 
   /* ── 3. Background Colors (.bg-*) ── */
   /* Using core button backgrounds for solid fills */
@@ -215,6 +219,107 @@ html.mdp-dark {
   .AccountSelector__toggle:hover, .AccountSelector__toggle:focus {
     background-color: var(--mdp-bg-3) !important;
     color: var(--mdp-text) !important;
+  }
+
+  /* ── AiSummaryBanner ── */
+  .AiSummaryBanner {
+    background-color: var(--mdp-bg-2) !important;
+    border-color: var(--mdp-border) !important;
+    border-left-color: var(--mdp-accent) !important;
+  }
+
+  .AiSummaryBanner__heading .Icon {
+    color: var(--mdp-accent) !important;
+  }
+
+  .AiSummaryBadge {
+    background-color: var(--mdp-bg-4) !important;
+    color: var(--mdp-text-secondary) !important;
+  }
+
+  .AiSummaryBanner__action {
+    background-color: transparent !important;
+    border-color: var(--mdp-border) !important;
+  }
+
+  .AiSummaryBanner__action:hover, .AiSummaryBanner__action:focus {
+    background-color: var(--mdp-bg-3) !important;
+  }
+
+  .AiSummaryBanner__text {
+    color: var(--mdp-text) !important;
+  }
+
+  .AiSummaryBanner__callout {
+    background-color: var(--mdp-alert-info-bg) !important;
+    border-color: var(--mdp-alert-info-border) !important;
+  }
+
+  .AiSummaryBanner__callout .Icon {
+    color: var(--mdp-alert-info-color) !important;
+  }
+
+  .AiSummaryBanner__calloutText {
+    color: var(--mdp-text-secondary) !important;
+  }
+
+  .AiSummaryBanner__footer {
+    border-top-color: var(--mdp-border-light) !important;
+  }
+
+  .AiSummaryBanner__generatedAt {
+    color: var(--mdp-text-secondary) !important;
+  }
+
+  .AiSummaryFeedback {
+    color: var(--mdp-text-secondary) !important;
+  }
+
+  .AiSummaryBanner__disclaimer {
+    color: var(--mdp-text-muted) !important;
+  }
+
+  .AiSummarySignals__item {
+    background-color: var(--mdp-bg-3) !important;
+    border-color: var(--mdp-border) !important;
+  }
+
+  .AiSummarySignals__label {
+    color: var(--mdp-text-secondary) !important;
+  }
+
+  .AiSummarySignals__value {
+    color: var(--mdp-text) !important;
+  }
+
+  .AiSummarySignals__item--danger {
+    background-color: var(--mdp-alert-danger-bg) !important;
+    border-color: var(--mdp-alert-danger-border) !important;
+  }
+
+  .AiSummarySignals__item--danger .AiSummarySignals__label,
+  .AiSummarySignals__item--danger .AiSummarySignals__value {
+    color: var(--mdp-alert-danger-color) !important;
+  }
+
+  .AiSummarySignals__item--success {
+    background-color: var(--mdp-alert-success-bg) !important;
+    border-color: var(--mdp-alert-success-border) !important;
+  }
+
+  .AiSummarySignals__item--success .AiSummarySignals__label,
+  .AiSummarySignals__item--success .AiSummarySignals__value {
+    color: var(--mdp-alert-success-color) !important;
+  }
+
+  .AiSummarySignals__item--warning {
+    background-color: var(--mdp-alert-warning-bg) !important;
+    border-color: var(--mdp-alert-warning-border) !important;
+  }
+
+  .AiSummarySignals__item--warning .AiSummarySignals__label,
+  .AiSummarySignals__item--warning .AiSummarySignals__value {
+    color: var(--mdp-alert-warning-color) !important;
   }
 
   .App__notifications .wkt-alert {
@@ -1099,7 +1204,7 @@ html.mdp-dark {
   }
 
   .text-muted, .OrderCheckout__footer-text-legal {
-    color: var(--mdp-text-muted) !important;
+    color: var(--mdp-text-muted-light) !important;
   }
 
   .Toolbar {
